@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+# Register your models(tables for the database) here.
 from app.models import *
 
 admin.site.register(Topic)
