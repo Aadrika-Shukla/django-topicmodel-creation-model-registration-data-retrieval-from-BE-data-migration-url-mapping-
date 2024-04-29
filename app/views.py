@@ -80,11 +80,11 @@ def insert_Acess(request):
     d=input('enter date')
     a=input('enter author')
     #WO=Webpage.objects.get(name=n)
-    ''' we can useget method to get the parent table object but if parent table object is not their 
+    ''' we can use get method to get the parent table object but if parent table object is not their 
     it throws doesnotexists error if you want to terminate the control flow if parent table object is not their  then use get()'''
     #WO.save() no need to save it as we are just getting the object
     LWO=WebPage.objects.filter(name=n)
-    if LWO:
+    if LWO: #filter method will return queryset of list of objects(rows)
         WO=LWO[0]
         AO=AccessRecord.objects.get_or_create(name=WO,date=d,author=a)[0]
         AO.save()
