@@ -81,7 +81,9 @@ def insert_Acess(request):
     a=input('enter author')
     #WO=Webpage.objects.get(name=n)
     ''' we can use get method to get the parent table object but if parent table object is not their 
-    it throws doesnotexists error if you want to terminate the control flow if parent table object is not their  then use get()'''
+    it throws doesnotexists error if you want to terminate the control flow if parent table object is not their  then use get()
+    always use primary key column when our table is connected to parent table in  order to filter unique 
+    records '''
     #WO.save() no need to save it as we are just getting the object
     LWO=WebPage.objects.filter(name=n)     
     if LWO: #filter method will return queryset of list of objects(rows)
